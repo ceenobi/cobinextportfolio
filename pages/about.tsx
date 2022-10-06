@@ -9,17 +9,15 @@ import {
 } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
-import axios from 'axios'
 import NextLink from 'next/link'
 import { motion } from 'framer-motion'
 
 import { About } from '../types'
+import {loadAbouts} from '../lib/loadData'
 
 interface IProps {
   abouts: About[]
 }
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 export default function AboutMe({ abouts }: IProps) {
   return (
@@ -219,7 +217,7 @@ export default function AboutMe({ abouts }: IProps) {
 }
 
 export async function getStaticProps() {
-  const { data } = await axios.get(`${BASE_URL}/api/abouts`)
+  const data = await loadAbouts()
   return {
     props: {
       abouts: data,

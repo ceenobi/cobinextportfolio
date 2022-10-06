@@ -41,9 +41,9 @@ const Home: NextPage = () => {
       </Head>
       <Flex
         py={{ base: 8, sm: '8.2rem', md: '7rem' }}
-        px={{ base: 8, md: '10rem' }}
+        px={{ base: 8, md: '10rem', lg: '6rem', xl:'8rem' }}
         minH='100vh'
-        gap={6}
+        gap={{ base: 6, xl: '8rem' }}
         direction={{ base: 'column', lg: 'row' }}
         bg='cream'
         align={{ base: 'center', lg: 'end' }}
@@ -106,7 +106,6 @@ const Home: NextPage = () => {
                           base: '2.5em',
                           sm: '4em',
                           md: '7em',
-                          lg: '6em',
                           xl: '9em',
                         }}
                         letterSpacing='wider'

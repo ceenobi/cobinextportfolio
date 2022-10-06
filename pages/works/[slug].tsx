@@ -11,12 +11,12 @@ import {
   Icon,
   Button,
 } from '@chakra-ui/react'
-import axios from 'axios'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { GoLinkExternal } from 'react-icons/go'
 import { Work } from '../../types'
+import { loadWorks, loadWorksDetails } from '../../lib/loadData'
 
 interface IProps {
   detail: Work[]
@@ -25,8 +25,6 @@ interface IProps {
 interface IParams extends ParsedUrlQuery {
   slug: string
 }
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 export default function WorkDetails({ detail }: IProps) {
   const textStyle = {
@@ -39,7 +37,7 @@ export default function WorkDetails({ detail }: IProps) {
       {detail?.map((item) => (
         <Box key={item._id}>
           <Head>
-            <title>{item.title}</title>
+            <title>{item.title} project review</title>
             <meta name='description' content='project detail' />
           </Head>
 
@@ -317,7 +315,7 @@ export default function WorkDetails({ detail }: IProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await axios.get(`${BASE_URL}/api/works`)
+  const data = await loadWorks()
   const dataList = data
   const paths = dataList.map((slug: any) => {
     return {
@@ -329,7 +327,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams
-  const { data } = await axios.get(`${BASE_URL}/api/works/${slug}`)
+  const data = await loadWorksDetails(slug)
   return {
     props: {
       detail: data,

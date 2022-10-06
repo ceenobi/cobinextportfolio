@@ -13,7 +13,6 @@
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@sanity/image-url": "^1.0.1",
-    "axios": "^1.0.0",
     "framer-motion": "^7.5.2",
     "next": "12.3.1",
     "next-sanity": "^0.8.4",

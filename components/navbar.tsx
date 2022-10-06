@@ -67,7 +67,11 @@ export default function Navbar() {
       color={showColor}
     >
       <Flex flex='1'>
-        <Flex gap={6} direction={{ base: 'row', md: 'column' }} align='center'>
+        <Flex
+          gap={{ base: 3, sm: 6 }}
+          direction={{ base: 'row', md: 'column' }}
+          align='center'
+        >
           {path && (
             <Link href='/' className='write'>
               Home
@@ -105,7 +109,7 @@ export default function Navbar() {
 
           <Box
             height={{ base: '0px', md: '80px' }}
-            width={{ base: '80px', md: '0.8px' }}
+            width={{ base: '40px', sm: '80px', md: '0.8px' }}
             border='1px'
             bg={showColor}
             mx='auto'

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Box, Flex, Heading, Text, Link } from '@chakra-ui/react'
-import axios from 'axios'
 import Head from 'next/head'
 import { AnimatePresence, motion } from 'framer-motion'
 import NextLink from 'next/link'
 import { Work } from '../../types'
+import { loadWorks } from '../../lib/loadData'
 
 const itemVariants = {
   closed: {
@@ -32,8 +32,6 @@ interface IProps {
   works: Work[]
 }
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
-
 export default function Works({ works }: IProps) {
   return (
     <>
@@ -45,7 +43,7 @@ export default function Works({ works }: IProps) {
         py={{ base: 16, sm: '8.2rem', md: '2rem' }}
         px={{ base: 8, md: '10rem' }}
         minH='100vh'
-        gap={{ base: 6, lg: '3rem' }}
+        gap={{ base: 6, lg: '8rem' }}
         direction={{ base: 'column', lg: 'row' }}
         bg='lightBlack'
         align={{ base: 'center', lg: 'end' }}
@@ -137,7 +135,7 @@ export default function Works({ works }: IProps) {
 }
 
 export async function getStaticProps() {
-  const { data } = await axios.get(`${BASE_URL}/api/works`)
+  const data = await loadWorks()
   return {
     props: {
       works: data,
