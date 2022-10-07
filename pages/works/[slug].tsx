@@ -12,7 +12,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import { motion, useAnimation, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { GoLinkExternal } from 'react-icons/go'
 import { Work } from '../../types'
@@ -48,6 +48,8 @@ export default function WorkDetails({ detail }: IProps) {
             bg='cream'
             gap={10}
             as={motion.div}
+            whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: '0.5' }}
           >
             <Flex
               h={{ base: '50vh', sm: '70vh', md: '90vh' }}
@@ -67,8 +69,8 @@ export default function WorkDetails({ detail }: IProps) {
                 }}
                 color='cream'
                 as={motion.h2}
-                whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-                transition={{ duration: '0.2' }}
+                whileInView={{ y: [100, 0, 50], opacity: [0, 0, 1] }}
+                transition={{ duration: '0.3' }}
                 textAlign='center'
               >
                 {item.title}
@@ -170,15 +172,15 @@ export default function WorkDetails({ detail }: IProps) {
               mb='5rem'
               as={motion.div}
               whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
+              transition={{ duration: '0.3' }}
             >
               <Box
                 w='full'
                 h='full'
                 mt='5rem'
                 as={motion.div}
-                whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-                transition={{ delay: '0.2', duration: '0.2' }}
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: '0.5' }}
               >
                 <Image
                   src={item?.cloudinaryList[0]?.secure_url}
@@ -204,13 +206,13 @@ export default function WorkDetails({ detail }: IProps) {
               <Box
                 boxSize='70%'
                 as={motion.div}
-                whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-                transition={{ delay: '0.2', duration: '0.2' }}
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: '0.5' }}
               >
                 <Image
                   src={item?.cloudinaryList[1]?.secure_url}
                   width='100%'
-                  height='100%'
+                  height='50%'
                   layout='responsive'
                   objectFit='cover'
                   alt='mockup'
@@ -231,8 +233,8 @@ export default function WorkDetails({ detail }: IProps) {
               <Box
                 boxSize='100%'
                 as={motion.div}
-                whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-                transition={{ delay: '0.2', duration: '0.2' }}
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: '0.5' }}
               >
                 <Image
                   src={item?.cloudinaryList[2]?.secure_url}
@@ -258,8 +260,8 @@ export default function WorkDetails({ detail }: IProps) {
               <Box
                 boxSize='100%'
                 as={motion.div}
-                whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-                transition={{ delay: '0.2', duration: '0.2' }}
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: '0.5' }}
               >
                 <Image
                   src={item?.cloudinaryList[3]?.secure_url}
@@ -274,7 +276,7 @@ export default function WorkDetails({ detail }: IProps) {
               </Box>
             </VStack>
             <Box
-              my={5}
+              my={{ base: 5, lg: '5rem' }}
               px={4}
               mx='auto'
               as={motion.div}

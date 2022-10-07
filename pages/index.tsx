@@ -36,23 +36,28 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Welcome To My Portfolio</title>
-        <meta name='description' content='Homepage' />
+        <title>Charles Mbachu</title>
+        <meta name='description' content='Welcome to my portfolio' />
       </Head>
       <Flex
-        py={{ base: 8, sm: '8.2rem', md: '7rem' }}
-        px={{ base: 8, md: '10rem', lg: '6rem', xl:'8rem' }}
+        py={{ base: 8, sm: '8.2rem', md: '7rem', lg: '5rem' }}
+        px={{ base: 8, md: '10rem', lg: '6rem', xl: '8rem' }}
         minH='100vh'
-        gap={{ base: 6, xl: '8rem' }}
+        gap={{ base: 6, lg: '6rem', xl: '8rem' }}
         direction={{ base: 'column', lg: 'row' }}
         bg='cream'
-        align={{ base: 'center', lg: 'end' }}
-        justify='center'
+        align='center'
+        justify={{ base: 'center', lg: 'space-between' }}
+        as={motion.div}
+        whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: '0.5' }}
       >
         <VStack
           spacing={4}
           align='start'
-          w={{ base: '83vw', md: '70vw', lg: '45vw' }}
+          justify='end'
+          w={{ base: '83vw', md: '70vw', lg: '300px', xl: '300px' }}
+          h={{ base: 'auto', lg: '400px', xl: '500px' }}
           as={motion.div}
           whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}
           transition={{ delay: '0.5', duration: '0.5' }}
@@ -62,7 +67,7 @@ const Home: NextPage = () => {
           </Text>
           <Text>Frontend Developer</Text>
           <Text>
-            Currently a collaborator at{' '}
+            Currently a collaborator at <br />
             <Box
               as='span'
               textDecoration='underline'

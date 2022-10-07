@@ -13,7 +13,7 @@ import NextLink from 'next/link'
 import { motion } from 'framer-motion'
 
 import { About } from '../types'
-import {loadAbouts} from '../lib/loadData'
+import { loadAbouts } from '../lib/loadData'
 
 interface IProps {
   abouts: About[]
@@ -30,18 +30,21 @@ export default function AboutMe({ abouts }: IProps) {
         py={{ base: 14, sm: '4rem', md: '2rem' }}
         px={{ base: 8, md: '10rem' }}
         minH='100vh'
-        gap={6}
+        gap={10}
         direction={{ base: 'column', lg: 'row' }}
         bg='cream'
         justify='space-between'
         as={motion.div}
+        whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: '0.5' }}
+        w='full'
       >
         {abouts.map((item) => (
           <Flex
             gap={10}
             align='start'
             direction='column'
-            w={{ base: '83vw', md: '70vw', lg: '50vw' }}
+            w={{ base: '80vw', md: '60vw', lg: '45vw', xl: '40vw' }}
             key={item._id}
             mx='auto'
             mt='2rem'
@@ -59,11 +62,12 @@ export default function AboutMe({ abouts }: IProps) {
                     base: '2.5em',
                     sm: '3.5em',
                     md: '7em',
-                    xl: '9.5em',
+                    lg: '11em',
+                    xl: '13em',
                   }}
                   letterSpacing='wider'
                   as={motion.h1}
-                  whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}
+                  whileInView={{ opacity: [0, 1] }}
                   transition={{ duration: '0.5' }}
                 >
                   About
@@ -96,6 +100,7 @@ export default function AboutMe({ abouts }: IProps) {
                   xl: '2em',
                 }}
                 fontWeight='semibold'
+                letterSpacing='wider'
               >
                 {item.title}
               </Text>
@@ -104,7 +109,6 @@ export default function AboutMe({ abouts }: IProps) {
               <Text>{item.description.slice(355, 525)}</Text>
             </VStack>
             <VStack
-              spacing={6}
               align='start'
               as={motion.div}
               whileInView={{ opacity: [0, 1] }}
@@ -115,12 +119,13 @@ export default function AboutMe({ abouts }: IProps) {
                 size='lg'
                 fontWeight='thin'
                 letterSpacing='wider'
+                mb={4}
               >
                 Experience
               </Heading>
               {item.experience.map((exp: string, index: number) => (
                 <Box key={index}>
-                  <Text mb={0}>-{exp}</Text>
+                  <Text>-{exp}</Text>
                 </Box>
               ))}
             </VStack>
@@ -185,6 +190,7 @@ export default function AboutMe({ abouts }: IProps) {
                 color='cream'
                 fontSize='18px'
                 className='buttonStyle'
+                mb={{ base: 5, lg: '5rem' }}
               >
                 Contact me
               </Button>
@@ -193,7 +199,7 @@ export default function AboutMe({ abouts }: IProps) {
         ))}
 
         <Box
-          w={{ md: '250px', lg: '350px' }}
+          w={{ lg: '350px' }}
           h='auto'
           display={{ base: 'none', lg: 'block' }}
           mt='2rem'

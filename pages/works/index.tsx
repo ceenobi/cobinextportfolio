@@ -40,13 +40,17 @@ export default function Works({ works }: IProps) {
         <meta name='description' content='some of my works' />
       </Head>
       <Flex
-        py={{ base: 16, sm: '8.2rem', md: '2rem' }}
+        py={{ base: 16, sm: '8rem', md: '1rem' }}
         px={{ base: 8, md: '10rem' }}
         minH='100vh'
         gap={{ base: 6, lg: '8rem' }}
         direction={{ base: 'column', lg: 'row' }}
         bg='lightBlack'
-        align={{ base: 'center', lg: 'end' }}
+        align='center'
+        justify={{ base: 'center', lg: 'space-between' }}
+        as={motion.div}
+        whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: '0.5' }}
       >
         <Flex
           direction='column'
@@ -54,11 +58,11 @@ export default function Works({ works }: IProps) {
           align='start'
           w={{ base: '83vw', md: '70vw', lg: '35vw', xl: '25vw' }}
           color='cream'
-          h={{ base: 'auto', md: '300px' }}
+          h={{ base: 'auto', md: '300px', lg: '500px' }}
           fontSize='sm'
-          justify='center'
+          justify={{ base: 'center', lg: 'end' }}
           as={motion.div}
-          whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}
+          whileInView={{ x: [50, 150, 0], opacity: [0, 0, 1] }}
           transition={{ delay: '0.5', duration: '0.5' }}
         >
           <Text fontWeight='semibold'>WORKS</Text>
@@ -78,9 +82,6 @@ export default function Works({ works }: IProps) {
           w={{ base: '83vw', md: '70vw', lg: '50vw' }}
           overflow={{ base: 'none', lg: 'auto' }}
           h={{ base: 'auto', lg: '90vh' }}
-          as={motion.div}
-          whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}
-          transition={{ delay: '0.5', duration: '0.5' }}
         >
           <AnimatePresence>
             <motion.aside
@@ -101,13 +102,13 @@ export default function Works({ works }: IProps) {
                 variants={sideVariants}
               >
                 {works.map((item) => (
-                  <Box key={item._id}>
+                  <Box key={item._id} mb={3}>
                     <NextLink href={`/works/${item.slug}`} passHref>
                       <Link>
                         <Box color='cream'>
                           <Heading
                             as={motion.h2}
-                            whileHover={{ scale: 0.9 }}
+                            whileHover={{ scale: 0.95 }}
                             variants={itemVariants}
                             fontSize={{
                               base: '2em',

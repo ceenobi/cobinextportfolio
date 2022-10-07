@@ -19,6 +19,9 @@ export default function Contact() {
         justify={{ base: 'start', md: 'center' }}
         align='start'
         minH='100vh'
+        as={motion.div}
+        whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
+        transition={{ duration: '0.5' }}
       >
         <Flex
           justify='center'
