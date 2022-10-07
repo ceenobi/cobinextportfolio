@@ -47,9 +47,6 @@ export default function WorkDetails({ detail }: IProps) {
             minH='100vh'
             bg='cream'
             gap={10}
-            as={motion.div}
-            whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
-            transition={{ duration: '0.5' }}
           >
             <Flex
               h={{ base: '50vh', sm: '70vh', md: '90vh' }}

@@ -48,9 +48,6 @@ const Home: NextPage = () => {
         bg='cream'
         align='center'
         justify={{ base: 'center', lg: 'space-between' }}
-        as={motion.div}
-        whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: '0.5' }}
       >
         <VStack
           spacing={4}

@@ -48,9 +48,6 @@ export default function Works({ works }: IProps) {
         bg='lightBlack'
         align='center'
         justify={{ base: 'center', lg: 'space-between' }}
-        as={motion.div}
-        whileInView={{ y: [200, 100, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: '0.5' }}
       >
         <Flex
           direction='column'

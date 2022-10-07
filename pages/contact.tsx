@@ -39,9 +39,6 @@ export default function Contact() {
               xl: '9.5em',
             }}
             letterSpacing='wider'
-            as={motion.h1}
-            whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}
-            transition={{ delay: '0.5', duration: '0.5' }}
           >
             Hello.
           </Heading>

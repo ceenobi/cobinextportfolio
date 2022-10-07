@@ -34,9 +34,6 @@ export default function AboutMe({ abouts }: IProps) {
         direction={{ base: 'column', lg: 'row' }}
         bg='cream'
         justify='space-between'
-        as={motion.div}
-        whileInView={{ y: [50, 150, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: '0.5' }}
         w='full'
       >
         {abouts.map((item) => (
