@@ -9,9 +9,8 @@ export default class Document extends NextDocument {
             href='https://fonts.cdnfonts.com/css/noblesville'
             rel='stylesheet'
           />
-          <link href='http://fonts.cdnfonts.com/css/cousine' rel='stylesheet' />
           <link
-            href='http://fonts.cdnfonts.com/css/neue-reman-sans'
+            href='https://fonts.cdnfonts.com/css/neue-reman-sans'
             rel='stylesheet'
           />
         </Head>

@@ -147,7 +147,7 @@ export default function AboutMe({ abouts }: IProps) {
               bg='blackAlpha.900'
               w={{ base: '120px', md: '230px' }}
               h={{ base: '50px', md: '60px' }}
-              variant='ghost'
+              variant='solid'
               color='cream'
               fontSize='18px'
               className='buttonStyle'
@@ -181,7 +181,7 @@ export default function AboutMe({ abouts }: IProps) {
                 bg='blackAlpha.900'
                 w={{ base: '160px', md: '230px' }}
                 h={{ base: '50px', md: '60px' }}
-                variant='ghost'
+                variant='solid'
                 color='cream'
                 fontSize='18px'
                 className='buttonStyle'

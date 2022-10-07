@@ -12,7 +12,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import Head from 'next/head'
-import { motion } from 'framer-motion'
+import { motion, useAnimation, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { GoLinkExternal } from 'react-icons/go'
 import { Work } from '../../types'
@@ -31,7 +31,6 @@ export default function WorkDetails({ detail }: IProps) {
     fontWeight: 'bold',
     textDecoration: 'underline',
   }
-
   return (
     <>
       {detail?.map((item) => (

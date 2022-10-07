@@ -27,7 +27,7 @@ const sideVariants = {
 }
 
 const menu = [
-  { name: 'WORK', to: 'works', id: 1 },
+  { name: 'WORKS', to: 'works', id: 1 },
   { name: 'ABOUT', to: 'about', id: 2 },
   { name: 'CONTACT', to: 'contact', id: 3 },
 ]

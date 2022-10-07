@@ -55,6 +55,7 @@ const theme = extendTheme(
               w: '300px',
               transition: '0.3s ease-in',
             },
+            bg:'blackAlpha.900 !important'
           },
         },
         '.contact': {
