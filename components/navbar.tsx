@@ -77,7 +77,11 @@ export default function Navbar() {
               Home
             </Link>
           )}
-          {pathB && <Link href='/works'>Works</Link>}
+          {pathB && (
+            <Link href='/works' className='write'>
+              Works
+            </Link>
+          )}
           {router.pathname === '/' && (
             <>
               <Link href='https://github.com/ceenobi' isExternal>
