@@ -23,7 +23,7 @@ export default function AboutMe({ abouts }: IProps) {
   return (
     <>
       <Head>
-        <title>About me</title>
+        <title>Charles - About me</title>
         <meta name='description' content='Who am I? What I do' />
       </Head>
       <Flex
