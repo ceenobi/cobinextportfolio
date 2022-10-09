@@ -183,7 +183,7 @@ export default function WorkDetails({ detail }: IProps) {
                   src={item?.cloudinaryList[0]?.secure_url}
                   layout='responsive'
                   width='100%'
-                  height='50%'
+                  height='60%'
                   objectFit='contain'
                   alt='mockimg'
                   blurDataURL='URL'
@@ -209,9 +209,9 @@ export default function WorkDetails({ detail }: IProps) {
                 <Image
                   src={item?.cloudinaryList[1]?.secure_url}
                   width='100%'
-                  height='50%'
+                  height='60%'
                   layout='responsive'
-                  objectFit='cover'
+                  objectFit='contain'
                   alt='mockup'
                   blurDataURL='URL'
                   placeholder='blur'
@@ -238,7 +238,7 @@ export default function WorkDetails({ detail }: IProps) {
                   width='100%'
                   height='60%'
                   layout='responsive'
-                  objectFit='cover'
+                  objectFit='contain'
                   alt='mockup'
                   blurDataURL='URL'
                   placeholder='blur'
@@ -265,7 +265,7 @@ export default function WorkDetails({ detail }: IProps) {
                   width='100%'
                   height='60%'
                   layout='responsive'
-                  objectFit='cover'
+                  objectFit='contain'
                   alt='mockup'
                   blurDataURL='URL'
                   placeholder='blur'
