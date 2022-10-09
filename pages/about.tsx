@@ -196,7 +196,7 @@ export default function AboutMe({ abouts }: IProps) {
         ))}
 
         <Box
-          w={{ lg: '350px' }}
+          w={{ lg: '300px' }}
           h='auto'
           display={{ base: 'none', lg: 'block' }}
           mt='2rem'
