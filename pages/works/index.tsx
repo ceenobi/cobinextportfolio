@@ -22,7 +22,7 @@ const sideVariants = {
   },
   open: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
       staggerDirection: -10,
     },
   },
@@ -60,7 +60,7 @@ export default function Works({ works }: IProps) {
           justify={{ base: 'center', lg: 'end' }}
           as={motion.div}
           whileInView={{ x: [50, 150, 0], opacity: [0, 0, 1] }}
-          transition={{ delay: '0.5', duration: '0.5' }}
+          transition={{ delay: '0.2', duration: '0.2' }}
         >
           <Text fontWeight='semibold'>WORKS</Text>
           <Text>
@@ -88,7 +88,7 @@ export default function Works({ works }: IProps) {
               }}
               exit={{
                 width: 0,
-                transition: { delay: 0.4, duration: 0.3 },
+                transition: { delay: 0.2, duration: 0.2 },
               }}
             >
               <Box
