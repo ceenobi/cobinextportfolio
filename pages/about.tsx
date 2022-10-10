@@ -49,9 +49,9 @@ export default function AboutMe({ abouts }: IProps) {
             <VStack
               spacing={6}
               align='start'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
+              // as={motion.div}
+              // whileInView={{ opacity: [0, 1] }}
+              // transition={{ duration: '0.1' }}
             >
               <Flex align='center' justify='space-between' w='full'>
                 <Heading
@@ -65,7 +65,7 @@ export default function AboutMe({ abouts }: IProps) {
                   letterSpacing='wider'
                   as={motion.h1}
                   whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: '0.5' }}
+                  transition={{ duration: '0.1' }}
                 >
                   About
                 </Heading>
@@ -76,7 +76,7 @@ export default function AboutMe({ abouts }: IProps) {
                   display={{ base: 'block', lg: 'none' }}
                   as={motion.div}
                   whileInView={{ x: [50, 100, 0], opacity: [0, 0, 1] }}
-                  transition={{ duration: '0.5' }}
+                  transition={{ duration: '0.1' }}
                 >
                   <Image
                     src='https://res.cloudinary.com/ceenobi/image/upload/f_auto,q_100/v1653075291/icons/1AE31A5C-9AE2-4A25-850F-67ACF1CF0E61_vmvcsv.jpg'
@@ -107,9 +107,9 @@ export default function AboutMe({ abouts }: IProps) {
             </VStack>
             <VStack
               align='start'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
+              // as={motion.div}
+              // whileInView={{ opacity: [0, 1] }}
+              // transition={{ duration: '0.1' }}
             >
               <Heading
                 as='h2'
@@ -129,9 +129,9 @@ export default function AboutMe({ abouts }: IProps) {
             <VStack
               spacing={6}
               align='start'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
+              // as={motion.div}
+              // whileInView={{ opacity: [0, 1] }}
+              // transition={{ duration: '0.1' }}
             >
               <Heading
                 as='h2'
@@ -162,9 +162,9 @@ export default function AboutMe({ abouts }: IProps) {
             <VStack
               spacing={6}
               align='start'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
+              // as={motion.div}
+              // whileInView={{ opacity: [0, 1] }}
+              // transition={{ duration: '0.1' }}
             >
               <Heading
                 as='h2'
