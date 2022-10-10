@@ -163,22 +163,8 @@ export default function WorkDetails({ detail }: IProps) {
                 <Box as='span'>&nbsp;{item.tags.join(' , ')}</Box>
               </Text>
             </Box>
-            <VStack
-              spacing='6rem'
-              align='center'
-              mb='5rem'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.3' }}
-            >
-              <Box
-                w='full'
-                h='full'
-                mt='5rem'
-                as={motion.div}
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: '0.5' }}
-              >
+            <VStack spacing='6rem' align='center' mb='5rem'>
+              <Box w='full' h='full' mt='5rem'>
                 <Image
                   src={item?.cloudinaryList[0]?.secure_url}
                   layout='responsive'
@@ -197,12 +183,7 @@ export default function WorkDetails({ detail }: IProps) {
               >
                 {item.description}
               </Text>
-              <Box
-                boxSize='100%'
-                as={motion.div}
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: '0.5' }}
-              >
+              <Box boxSize='100%'>
                 <Image
                   src={item?.cloudinaryList[1]?.secure_url}
                   width='100%'
@@ -221,12 +202,7 @@ export default function WorkDetails({ detail }: IProps) {
               >
                 {item.descriptionB}
               </Text>
-              <Box
-                boxSize='100%'
-                as={motion.div}
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: '0.5' }}
-              >
+              <Box boxSize='100%'>
                 <Image
                   src={item?.cloudinaryList[2]?.secure_url}
                   width='100%'
@@ -245,12 +221,7 @@ export default function WorkDetails({ detail }: IProps) {
               >
                 {item.descriptionC}
               </Text>
-              <Box
-                boxSize='100%'
-                as={motion.div}
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: '0.5' }}
-              >
+              <Box boxSize='100%'>
                 <Image
                   src={item?.cloudinaryList[3]?.secure_url}
                   width='100%'
