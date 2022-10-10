@@ -76,9 +76,6 @@ export default function WorkDetails({ detail }: IProps) {
             <Box
               maxW='container.md'
               mx='auto'
-              as={motion.div}
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: '0.5' }}
             >
               <Heading
                 as='h2'
@@ -97,9 +94,6 @@ export default function WorkDetails({ detail }: IProps) {
                 gap={4}
                 mb={8}
                 px={8}
-                as={motion.div}
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: '0.5' }}
               >
                 <VStack
                   spacing={2}
