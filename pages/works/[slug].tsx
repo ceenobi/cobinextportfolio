@@ -191,17 +191,14 @@ export default function WorkDetails({ detail }: IProps) {
                 />
               </Box>
               <Text
-                w={{ base: '90%', md: '500px', lg: '600px' }}
+                w={{ base: '90%', md: '500px', lg: '600px', xl: '700px' }}
                 lineHeight='tall'
                 fontSize={{ base: 'md', lg: 'lg' }}
-                // as={motion.p}
-                // whileInView={{ opacity: [0, 1] }}
-                // transition={{ duration: '0.5' }}
               >
                 {item.description}
               </Text>
               <Box
-                boxSize='70%'
+                boxSize='100%'
                 as={motion.div}
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: '0.5' }}
@@ -218,11 +215,8 @@ export default function WorkDetails({ detail }: IProps) {
                 />
               </Box>
               <Text
-                w={{ base: '90%', md: '500px', lg: '600px' }}
+                w={{ base: '90%', md: '500px', lg: '600px', xl: '700px' }}
                 lineHeight='tall'
-                // as={motion.p}
-                // whileInView={{ opacity: [0, 1] }}
-                // transition={{ duration: '0.5' }}
                 fontSize={{ base: 'md', lg: 'lg' }}
               >
                 {item.descriptionB}
@@ -245,11 +239,8 @@ export default function WorkDetails({ detail }: IProps) {
                 />
               </Box>
               <Text
-                w={{ base: '90%', md: '500px', lg: '600px' }}
+                w={{ base: '90%', md: '500px', lg: '600px', xl: '700px' }}
                 lineHeight='tall'
-                // as={motion.p}
-                // whileInView={{ opacity: [0, 1] }}
-                // transition={{ duration: '0.5' }}
                 fontSize={{ base: 'md', lg: 'lg' }}
               >
                 {item.descriptionC}

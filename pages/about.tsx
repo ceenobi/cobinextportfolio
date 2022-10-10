@@ -46,13 +46,7 @@ export default function AboutMe({ abouts }: IProps) {
             mx='auto'
             mt='2rem'
           >
-            <VStack
-              spacing={6}
-              align='start'
-              // as={motion.div}
-              // whileInView={{ opacity: [0, 1] }}
-              // transition={{ duration: '0.1' }}
-            >
+            <VStack spacing={6} align='start'>
               <Flex align='center' justify='space-between' w='full'>
                 <Heading
                   fontSize={{
@@ -105,12 +99,7 @@ export default function AboutMe({ abouts }: IProps) {
               <Text>{item.description.slice(150, 355)}</Text>
               <Text>{item.description.slice(355, 525)}</Text>
             </VStack>
-            <VStack
-              align='start'
-              // as={motion.div}
-              // whileInView={{ opacity: [0, 1] }}
-              // transition={{ duration: '0.1' }}
-            >
+            <VStack align='start'>
               <Heading
                 as='h2'
                 size='lg'
@@ -126,13 +115,7 @@ export default function AboutMe({ abouts }: IProps) {
                 </Box>
               ))}
             </VStack>
-            <VStack
-              spacing={6}
-              align='start'
-              // as={motion.div}
-              // whileInView={{ opacity: [0, 1] }}
-              // transition={{ duration: '0.1' }}
-            >
+            <VStack spacing={6} align='start'>
               <Heading
                 as='h2'
                 size='lg'
@@ -159,13 +142,7 @@ export default function AboutMe({ abouts }: IProps) {
             >
               My CV
             </Button>
-            <VStack
-              spacing={6}
-              align='start'
-              // as={motion.div}
-              // whileInView={{ opacity: [0, 1] }}
-              // transition={{ duration: '0.1' }}
-            >
+            <VStack spacing={6} align='start'>
               <Heading
                 as='h2'
                 size='lg'
