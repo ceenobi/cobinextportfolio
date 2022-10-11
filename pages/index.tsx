@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         <meta name='description' content='Welcome to my portfolio' />
       </Head>
       <Flex
-        py={{ base: 8, sm: '8.2rem', md: '7rem', lg: '5rem' }}
+        py={{ base: 12, sm: '8.2rem', md: '7rem', lg: '5rem' }}
         px={{ base: 8, md: '10rem', lg: '6rem', xl: '8rem' }}
         minH='100vh'
         gap={{ base: 6, lg: '6rem', xl: '8rem' }}
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                     <Link>
                       <Heading
                         as={motion.h2}
-                        whileHover={{ scale: 0.9 }}
+                        whileHover={{ scale: 1 }}
                         variants={itemVariants}
                         fontSize={{
                           base: '2.5em',
