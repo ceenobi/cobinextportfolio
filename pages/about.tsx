@@ -97,7 +97,7 @@ export default function AboutMe({ abouts }: IProps) {
               </Text>
               <Text>{item.description.slice(0, 150)}</Text>
               <Text>{item.description.slice(150, 355)}</Text>
-              <Text>{item.description.slice(355, 525)}</Text>
+              <Text>{item.description.slice(355, 550)}</Text>
             </VStack>
             <VStack align='start'>
               <Heading

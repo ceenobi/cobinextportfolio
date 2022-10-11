@@ -73,10 +73,7 @@ export default function WorkDetails({ detail }: IProps) {
                 {item.title}
               </Heading>
             </Flex>
-            <Box
-              maxW='container.md'
-              mx='auto'
-            >
+            <Box maxW='container.md' mx='auto'>
               <Heading
                 as='h2'
                 size='xl'
@@ -97,7 +94,7 @@ export default function WorkDetails({ detail }: IProps) {
               >
                 <VStack
                   spacing={2}
-                  w={{ base: 'full', md: '300px', lg: '200px' }}
+                  w={{ base: 'full', md: '300px', lg: '200px'}}
                   align='start'
                 >
                   <Text sx={textStyle}>ROLE</Text>
@@ -113,7 +110,7 @@ export default function WorkDetails({ detail }: IProps) {
                 </VStack>
                 <VStack
                   spacing={2}
-                  w={{ base: 'full', md: '300px', lg: '200px' }}
+                  w={{ base: 'full', md: '300px', lg: '200px'}}
                   align='start'
                 >
                   <Text sx={textStyle}>RESPONSIBILITIES</Text>
