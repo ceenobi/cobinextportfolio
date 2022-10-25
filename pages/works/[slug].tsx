@@ -16,7 +16,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { GoLinkExternal } from 'react-icons/go'
 import { Work } from '../../types'
-import { loadWorks, loadWorksDetails } from '../../lib/loadData'
+import { fetchWorks, fetchWorkDetails } from '../../lib/loadData'
 
 interface IProps {
   detail: Work[]
@@ -94,7 +94,7 @@ export default function WorkDetails({ detail }: IProps) {
               >
                 <VStack
                   spacing={2}
-                  w={{ base: 'full', md: '300px', lg: '200px'}}
+                  w={{ base: 'full', md: '300px', lg: '200px' }}
                   align='start'
                 >
                   <Text sx={textStyle}>ROLE</Text>
@@ -110,7 +110,7 @@ export default function WorkDetails({ detail }: IProps) {
                 </VStack>
                 <VStack
                   spacing={2}
-                  w={{ base: 'full', md: '300px', lg: '200px'}}
+                  w={{ base: 'full', md: '300px', lg: '200px' }}
                   align='start'
                 >
                   <Text sx={textStyle}>RESPONSIBILITIES</Text>
@@ -266,7 +266,7 @@ export default function WorkDetails({ detail }: IProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await loadWorks()
+  const data = await fetchWorks()
   const dataList = data
   const paths = dataList.map((slug: any) => {
     return {
@@ -276,9 +276,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: 'blocking' }
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { slug } = context.params as IParams
-  const data = await loadWorksDetails(slug)
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await fetchWorkDetails()
   return {
     props: {
       detail: data,

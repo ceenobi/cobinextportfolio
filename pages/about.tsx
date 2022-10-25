@@ -13,7 +13,7 @@ import NextLink from 'next/link'
 import { motion } from 'framer-motion'
 
 import { About } from '../types'
-import { loadAbouts } from '../lib/loadData'
+import { fetchAboutMe } from '../lib/loadData'
 
 interface IProps {
   abouts: About[]
@@ -197,7 +197,7 @@ export default function AboutMe({ abouts }: IProps) {
 }
 
 export async function getStaticProps() {
-  const data = await loadAbouts()
+  const data = await fetchAboutMe()
   return {
     props: {
       abouts: data,

@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         justify={{ base: 'center', lg: 'space-between' }}
       >
         <VStack
-          spacing={4}
+          spacing={3}
           align='start'
           justify='end'
           w={{ base: '83vw', md: '70vw', lg: '300px', xl: '300px' }}
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
           </Text>
           <Text>Frontend Developer</Text>
           <Text>
-            Currently a collaborator at <br />
+            Currently works at <br />
             <Box
               as='span'
               textDecoration='underline'
@@ -108,9 +108,10 @@ const Home: NextPage = () => {
                           base: '2.5em',
                           sm: '4em',
                           md: '7em',
-                          xl: '9em',
+                          xl: '7em',
                         }}
                         letterSpacing='wider'
+                        lineHeight='base'
                       >
                         {name}
                       </Heading>

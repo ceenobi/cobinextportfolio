@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { AnimatePresence, motion } from 'framer-motion'
 import NextLink from 'next/link'
 import { Work } from '../../types'
-import { loadWorks } from '../../lib/loadData'
+import { fetchWorks } from '../../lib/loadData'
 
 const itemVariants = {
   closed: {
@@ -133,7 +133,7 @@ export default function Works({ works }: IProps) {
 }
 
 export async function getStaticProps() {
-  const data = await loadWorks()
+  const data = await fetchWorks()
   return {
     props: {
       works: data,
