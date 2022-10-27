@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import {
   Box,
   Flex,
@@ -196,7 +197,7 @@ export default function AboutMe({ abouts }: IProps) {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchAboutMe()
   return {
     props: {

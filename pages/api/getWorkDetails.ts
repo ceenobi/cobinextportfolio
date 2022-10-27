@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { worksQueryDetails } from '../../utils/queries'
 import { client } from '../../utils/client'
-import { Work } from '../../types'
+import { WorkDetail } from '../../types'
 
 type Data = {
-  works: Work
+  works: WorkDetail[]
 }
 
 export default async function handler(
@@ -13,6 +13,6 @@ export default async function handler(
 ) {
   const { slug } = req.query
   const query = worksQueryDetails(slug)
-  const works: Work = await client.fetch(query)
+  const works: WorkDetail[] = await client.fetch(query)
   res.status(200).json({ works })
 }

@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           spacing={3}
           align='start'
           justify='end'
-          w={{ base: '83vw', md: '70vw', lg: '300px', xl: '300px' }}
+          w={{ base: '83vw', md: '70vw', lg: '300px', xl: '320px' }}
           h={{ base: 'auto', lg: '400px', xl: '500px' }}
           as={motion.div}
           whileInView={{ x: [100, 50, 0], opacity: [0, 0, 1] }}

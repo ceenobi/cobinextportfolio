@@ -1,4 +1,4 @@
-import React from 'react'
+import type { GetStaticProps } from 'next'
 import { Box, Flex, Heading, Text, Link } from '@chakra-ui/react'
 import Head from 'next/head'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -132,7 +132,7 @@ export default function Works({ works }: IProps) {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await fetchWorks()
   return {
     props: {

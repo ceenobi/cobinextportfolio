@@ -15,11 +15,11 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { GoLinkExternal } from 'react-icons/go'
-import { Work } from '../../types'
+import { WorkDetail } from '../../types'
 import { fetchWorks, fetchWorkDetails } from '../../lib/loadData'
 
 interface IProps {
-  detail: Work[]
+  detail: WorkDetail[]
 }
 
 interface IParams extends ParsedUrlQuery {
@@ -27,6 +27,7 @@ interface IParams extends ParsedUrlQuery {
 }
 
 export default function WorkDetails({ detail }: IProps) {
+  console.log(detail)
   const textStyle = {
     fontWeight: 'bold',
     textDecoration: 'underline',
@@ -276,11 +277,22 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: 'blocking' }
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetchWorkDetails()
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug } = context.params as IParams
+  const data = await fetchWorkDetails(slug)
   return {
     props: {
       detail: data,
     },
   }
 }
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const { slug } = context.params as IParams
+//   const data = await fetchWorkDetails(slug)
+//   console.log('data', data)
+//   return {
+//     props: {
+//       detail: data,
+//     },
+//   }
+// }

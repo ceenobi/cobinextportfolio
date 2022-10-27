@@ -11,6 +11,12 @@ export interface Work {
   title: string
   project: string
   slug: string
+}
+export interface WorkDetail {
+  _id: string
+  title: string
+  project: string
+  slug: string
   headline: string
   role: string[]
   responsibilities: string
